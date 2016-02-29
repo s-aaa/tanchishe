@@ -1,0 +1,42 @@
+#sense{
+	width:580px;
+	height: 580px;
+	border:1px solid black;
+	margin:0 auto;
+	background: black;
+}
+.block{
+	width:28px;
+	height: 28px;
+	background: #fff;
+	margin-right: 1px ;
+	margin-bottom: 1px ;
+	float: left;
+}
+#kaishi{
+	position: absolute;
+	width:80px;
+	height: 30px;
+	top:45%;
+	left:20%;
+	margin-top:-15px;
+	margin-left:-40px; 
+}
+#zanting{
+	position: absolute;
+	width:80px;
+	height: 30px;
+	top:55%;
+	left:20%;
+	margin-top:-15px;
+	margin-left:-40px; 
+}
+#reload{
+	position: absolute;
+	width:80px;
+	height: 30px;
+	top:65%;
+	left:20%;
+	margin-top:-15px;
+	margin-left:-40px; 
+}
