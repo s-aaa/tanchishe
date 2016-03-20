@@ -1,9 +1,9 @@
 #sense{
 	width:580px;
 	height: 580px;
-	border:1px solid black;
+	border:1px solid #ccc;
 	margin:0 auto;
-	background: black;
+	background: #ccc;
 }
 .block{
 	width:28px;
@@ -31,12 +31,27 @@
 	margin-top:-15px;
 	margin-left:-40px; 
 }
-#reload{
-	position: absolute;
-	width:80px;
-	height: 30px;
-	top:65%;
-	left:20%;
-	margin-top:-15px;
-	margin-left:-40px; 
+@media(max-width: 768px){
+	#sense{
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		width:320px;
+		height:320px;
+		margin:auto;
+	}
+	.block{
+		width: 15px;
+		height:15px;
+	}
+	#kaishi{
+		top:80px;
+		left:130px;
+	}
+	#zanting{
+		top:80px;
+		left:250px;
+	}
 }

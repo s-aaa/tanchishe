@@ -10,7 +10,6 @@ $(function(){
 	var snack=[{x:0,y:0},{x:0,y:1},{x:0,y:2}];
 	var ss=snack;
 	var data={'0_0':true,'0_1':true,'0_2':false};
-	// console.log(snack[0].x)
 	var huashe=function(){
 		for (var i = 0; i < snack.length; i++) {
 			$('#'+snack[i].x+'_'+snack[i].y).css({'background':'red'})
@@ -32,7 +31,6 @@ $(function(){
 	var foods=food();
 	var fangxiang=39;
 	var move=function(){
-		
 		var oldtou=snack[snack.length-1];
 		if (fangxiang==39) {
 			var newtou={x:oldtou.x,y:oldtou.y+1};
@@ -69,7 +67,7 @@ $(function(){
 	}
 	// var t=setInterval(move,300);
 	$(document).keydown(function(e){
-		
+		console.log(e.keyCode)
 		if(Math.abs(e.keyCode-fangxiang)==2){//相反方向不能同时操作
 			return;
 		}
@@ -79,14 +77,38 @@ $(function(){
 		fangxiang=e.keyCode;
 	})
 
+
+	var w=document.documentElement.clientWidth;
+	// alert(w)
+	if (w<768) {
+		touch.on(document,'swiperight',function(){
+			fangxiang=39;
+		})
+		touch.on(document,'swipeleft',function(){
+			fangxiang=37;
+		})
+		touch.on(document,'swipeup',function(){
+			fangxiang=38;
+		})
+		touch.on(document,'swipedown',function(){
+			fangxiang=40;
+		})
+		touch.on('#zanting','tap',function(){
+			clearInterval(t);
+		});
+		touch.on('#kaishi','tap',function(){
+			t=setInterval(move,300);
+		});
+	}
+
 	
 	var t;
-	$('#zanting').click(function(){
-		clearInterval(t);
-	})
-	$('#kaishi').click(function(){
-		
+	var kaishi=function(){
 		t=setInterval(move,300);
-		
-	})
+	}
+	var zanting=function(){
+		clearInterval(t);
+	}
+	// $('#zanting').bind('click',zanting)
+	// $('#kaishi').bind('click',kaishi)
 })
