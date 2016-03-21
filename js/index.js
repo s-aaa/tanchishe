@@ -109,6 +109,6 @@ $(function(){
 	var zanting=function(){
 		clearInterval(t);
 	}
-	// $('#zanting').bind('click',zanting)
-	// $('#kaishi').bind('click',kaishi)
+	$('#zanting').bind('click',zanting)
+	$('#kaishi').bind('click',kaishi)
 })
