@@ -67,7 +67,6 @@ $(function(){
 	}
 	// var t=setInterval(move,300);
 	$(document).keydown(function(e){
-		console.log(e.keyCode)
 		if(Math.abs(e.keyCode-fangxiang)==2){//相反方向不能同时操作
 			return;
 		}
